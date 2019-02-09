@@ -5,7 +5,7 @@ PROJECT_NAME=$(basename $ROOT_FOLDER | perl -pe 's/([^_])([A-Z])/\1_\2/g' | tr '
 
 function makeEnv()
 {
-    docker build -t ${PROJECT_NAME}:env -f ${ROOT_FOLDER}/env/env.Dockerfile ${ROOT_FOLDER}/env
+    docker build -t ${PROJECT_NAME}:env -f ${ROOT_FOLDER}/dep/mtv_env/env.Dockerfile ${ROOT_FOLDER}/dep/mtv_env
 }
 
 function runEnv()
